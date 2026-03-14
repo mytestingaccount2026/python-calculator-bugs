@@ -18,7 +18,8 @@ def multiply(a, b):
 
 def divide(a, b):
     """Divide a by b"""
-    # BUG 2: No check for division by zero
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b
 
 def power(a, b):
@@ -79,7 +80,7 @@ def main():
                 print(f"Result: {num1} % {num2} = {result}")
 
         except ValueError:
-            # BUG 5: Error message is misleading and doesn't help user
+            # BUG 5: Error message is misleading and does not help user
             print("Error occurred!")
         except Exception as e:
             print(f"An error occurred: {e}")
