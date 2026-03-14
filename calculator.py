@@ -23,8 +23,7 @@ def divide(a, b):
 
 def power(a, b):
     """Raise a to the power of b"""
-    # BUG 3: Uses multiplication instead of power operation
-    return a * b
+    return a ** b
 
 def modulo(a, b):
     """Return remainder of a divided by b"""
@@ -79,7 +78,7 @@ def main():
                 print(f"Result: {num1} % {num2} = {result}")
 
         except ValueError:
-            # BUG 5: Error message is misleading and doesn't help user
+            # BUG 5: Error message is misleading and does not help user
             print("Error occurred!")
         except Exception as e:
             print(f"An error occurred: {e}")
