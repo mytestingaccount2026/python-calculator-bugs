@@ -45,8 +45,12 @@ def main():
 
     while True:
         try:
-            # BUG 4: Input is not validated properly - crashes on non-numeric input
-            choice = int(input("\nEnter operation (0-6): "))
+            try:
+                choice = int(input("
+Enter operation (0-6): "))
+            except ValueError:
+                print("Invalid input. Please enter a number between 0-6.")
+                continue
 
             if choice == 0:
                 print("Goodbye!")
@@ -86,3 +90,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
