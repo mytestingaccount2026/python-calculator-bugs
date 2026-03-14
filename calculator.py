@@ -79,8 +79,7 @@ def main():
                 print(f"Result: {num1} % {num2} = {result}")
 
         except ValueError:
-            # BUG 5: Error message is misleading and doesn't help user
-            print("Error occurred!")
+            print("Invalid input. Please enter a valid number.")
         except Exception as e:
             print(f"An error occurred: {e}")
 
