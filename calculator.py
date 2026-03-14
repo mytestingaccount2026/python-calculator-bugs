@@ -9,8 +9,7 @@ def add(a, b):
 
 def subtract(a, b):
     """Subtract b from a"""
-    # BUG 1: Wrong operation - returns addition instead of subtraction
-    return a + b
+    return a - b
 
 def multiply(a, b):
     """Multiply two numbers"""
@@ -79,7 +78,7 @@ def main():
                 print(f"Result: {num1} % {num2} = {result}")
 
         except ValueError:
-            # BUG 5: Error message is misleading and doesn't help user
+            # BUG 5: Error message is misleading and does not help user
             print("Error occurred!")
         except Exception as e:
             print(f"An error occurred: {e}")
